@@ -1,20 +1,268 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "",
+	"name": "taikou5dx",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#shebang"
 		},
 		{
-			"include": "#strings"
+			"include": "#chapters"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
+		"shebang": {
+			"patterns": [
+				{
+					"match": "^太閤立志伝５イベントソース$",
+					"name": "comment.line.shebang.taikou5dx"
+				}
+			]
+		},
+		"chapters": {
+			"name": "meta.block.chapter.taikou5dx",
+			"patterns": [
+				{
+					"name": "keyword.other.chapter.taikou5dx",
+					"match": "チャプター"
+				},
+				{
+					"name": "meta.block.chapter.body.taikou5dx",
+					"begin": "(\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.section.block.begin.bracket.curly.chapter.taikou5dx"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.section.block.end.bracket.curly.chapter.taikou5dx"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#events"
+						},
+						{
+							"include": "#comments"
+						}
+					]
+				}
+			]
+		},
+		"events": {
+			"name": "meta.block.event.taikou5dx",
+			"patterns": [
+				{
+					"name": "keyword.other.event.taikou5dx",
+					"match": "(イベント):([^\\/\\{]*)",
+					"captures": {
+						"1": {
+							"name": "support.class.event.taikou5dx"
+						},
+						"2": {
+							"name": "entity.name.type.event.taikou5dx"
+						}
+					}
+				},
+				{
+					"name": "meta.block.event.body.taikou5dx",
+					"begin": "(\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.section.block.begin.bracket.curly.event.taikou5dx"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.section.block.end.bracket.curly.event.taikou5dx"
+						}
+					},
+					"patterns": [
+						{
+							"name": "meta.block.event.attibute.taikou5dx",
+							"match": "(属性):([^\\s\\/]+)",
+							"captures": {
+								"1": {
+									"name": "support.variable.attribute.taikou5dx"
+								},
+								"2" : {
+									"name": "entity.name.variable.attribute.taikou5dx"
+								}
+							}
+						},
+						{
+							"name": "meta.block.event.trigger.taikou5dx",
+							"match": "(発生契機):([^\\s\\/]+)",
+							"captures": {
+								"1": {
+									"name": "support.variable.trigger.taikou5dx"
+								},
+								"2" : {
+									"name": "entity.name.variable.trigger.taikou5dx"
+								}
+							}
+						},
+						{
+							"name": "meta.block.event.condition.taikou5dx",
+							"match": "(発生条件):",
+							"captures": {
+								"1": {
+									"name": "support.variable.condition.taikou5dx"
+								}
+							}
+						},
+						{
+							"name": "meta.block.event.script.taikou5dx",
+							"match": "(スクリプト):",
+							"captures": {
+								"1": {
+									"name": "support.variable.script.taikou5dx"
+								}
+							}
+						},
+						{
+							"include": "#blocks_curly"
+						},
+						{
+							"include": "#comments"
+						}
+					]
+				}
+			]
+		},
+		"blocks_curly": {
+			"begin": "(\\{)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.section.block.begin.bracket.curly.function.taikou5dx"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.section.block.end.bracket.curly.function.taikou5dx"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#commands"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#blocks_curly"
+				},
+				{
+					"include": "#blocks_square"
+				},
+				{
+					"include": "#blocks_round"
+				},
+				{
+					"include": "#comments"
+				}
+			]
+		},
+		"commands" : {
+			"patterns": [
+				{
+					"name": "keyword.control.taikou5dx",
+					"match":  "\\s(条件ブロック|分岐|ループ|条件ループ|場合別|他岐|場合別|場合分岐|主人公別|主人公分岐|ＯＲ調査|ＡＮＤ調査):"
+				},
+				{
+					"name" : "entity.name.function.taikou5dx",
+					"match": "\\s(\\S*?):"
+				}
+			]
+		},
+		"blocks_round" : {
+			"begin": "(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.section.block.begin.bracket.round.function.taikou5dx"
+				}
+			},
+			"end": "\\)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.section.block.end.bracket.round.function.taikou5dx"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#blocks_square"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"match": ",",
+					"name": "punctuation.separator.delimiter.comma.taikou5dx"
+				},
+				{
+					"match": "[^,\\[\\]\\(\\)\\/]+",
+					"name": "variable.parameter.taikou5dx"
+				}
+			]
+		},
+		"blocks_square" : {
+			"name": "meta.block.context.body.taikou5dx",
+			"begin": "(\\[\\[)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.section.block.begin.bracket.square.function.taikou5dx"
+				}
+			},
+			"end": "(\\]\\])",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.section.block.end.bracket.square.function.taikou5dx"
+				}
+			},
+			"patterns": [
+				{
+					"name" : "string.interpolated",
+					"match": "\\{(.*)\\}"
+				},
+				{
+					"name" : "string.interpolated",
+					"match": "\\((.*)\\)"
+				},
+				{
+					"name" : "constant.character.escape",
+					"match": "\\\\n"
+				},
+				{
+					"name": "string.quoted.other.taikou5dx",
+					"match": "[^\\[\\]\\\\]+"
+				}
+			]
+		},
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.taikou5dx",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "constant.language.taikou5dx",
+					"match": "\\b(真|偽|勝利|敗北|可|否)\\b"
+				},
+				{
+					"name": "keyword.operator.taikou5dx",
+					"match": "(?!\\/\\/)(\\+|\\-|\\*|\\/|%|<|>|<=|>=|==|!=)"
+				},
+				{
+					"name": "support.variable.taikou5dx",
+					"match": "\\b(Ｚｅｒｏ|Ｒｎｄ|Ｒｎｄ１００|コンテナカウンタ|コンテナポインタ|参考値|経過時間)\\b"
+				},
+				{
+					"name" : "constant.numeric",
+					"match": "\\b\\d+\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.taikou5dx",
@@ -24,6 +272,14 @@
 				{
 					"name": "constant.character.escape.taikou5dx",
 					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "\/\/.*",
+					"name": "comment.line.double-slash.taikou5dx"
 				}
 			]
 		}
