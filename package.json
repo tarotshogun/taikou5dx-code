@@ -1,0 +1,25 @@
+{
+    "name": "taikou5dx-code",
+    "displayName": "taikou5dx-code",
+    "description": "This extension supports the development of taikou5dx events.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "taikou5dx",
+            "aliases": ["taikou5dx", "taikou5dx"],
+            "extensions": ["txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "taikou5dx",
+            "scopeName": "text.taikou5dx",
+            "path": "./syntaxes/taikou5dx.tmLanguage.json"
+        }]
+    }
+}
