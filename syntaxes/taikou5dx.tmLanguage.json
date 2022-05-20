@@ -212,7 +212,7 @@
 			]
 		},
 		"blocks_square" : {
-			"name": "meta.block.context.body.taikou5dx",
+			"name": "string.quoted.other.taikou5dx",
 			"begin": "(\\[\\[)",
 			"beginCaptures": {
 				"1": {
@@ -227,20 +227,48 @@
 			},
 			"patterns": [
 				{
-					"name" : "string.interpolated",
-					"match": "\\{(.*)\\}"
+					"name": "meta.block.context.body.taikou5dx",
+					"begin": "(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.section.block.begin.bracket.square.function.string.taikou5dx"
+						}
+					},
+					"end": "(\\))",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.section.block.end.bracket.square.function.string.taikou5dx"
+						}
+					},
+					"patterns": [
+						{
+							"name" : "string.interpolated.value"
+						}
+					]
 				},
 				{
-					"name" : "string.interpolated",
-					"match": "\\((.*)\\)"
+					"name": "meta.block.context.body.taikou5dx",
+					"begin": "(\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.section.block.begin.bracket.curly.function.string.taikou5dx"
+						}
+					},
+					"end": "(\\})",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.section.block.end.bracket.curly.function.string.taikou5dx"
+						}
+					},
+					"patterns": [
+						{
+							"name" : "string.interpolated.word"
+						}
+					]
 				},
 				{
 					"name" : "constant.character.escape",
 					"match": "\\\\n"
-				},
-				{
-					"name": "string.quoted.other.taikou5dx",
-					"match": "[^\\[\\]\\\\]+"
 				}
 			]
 		},
