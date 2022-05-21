@@ -1,7 +1,7 @@
 {
     "name": "taikou5dx-code",
     "displayName": "taikou5dx-code",
-    "description": "This extension supports the development of taikou5dx events.",
+    "description": "TAIKO-RISSIDEN event scripts for Visual Studio Code.",
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.64.0"
