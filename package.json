@@ -9,6 +9,7 @@
 		"url": "https://github.com/tarot-shogun/taikou5dx-code"
 	},
     "license": "SEE LICENSE IN LICENSE.txt",
+    "homepage": "https://github.com/tarot-shogun/taikou5dx-code/blob/main/README.md",
     "engines": {
         "vscode": "^1.64.0"
     },
