@@ -3,6 +3,7 @@
     "displayName": "taikou5dx-code",
     "description": "TAIKO-RISSIDEN event scripts for Visual Studio Code.",
     "version": "0.1.0",
+    "publisher": "tarotshogun",
     "engines": {
         "vscode": "^1.64.0"
     },
