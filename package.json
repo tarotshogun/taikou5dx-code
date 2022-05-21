@@ -4,6 +4,9 @@
     "description": "TAIKO-RISSIDEN event scripts for Visual Studio Code.",
     "version": "0.1.0",
     "publisher": "tarotshogun",
+    "author": {
+        "name": "Tarots Hogun"
+    },
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tarot-shogun/taikou5dx-code"
