@@ -1,65 +1,41 @@
 # taikou5dx-code README
 
-This is the README for your extension "taikou5dx-code". After writing up a brief description, we recommend including the following sections.
+あなたの拡張機能「taikou5dx-code」についてこちらのREADMEを使用します。
+簡単な概要を記載したあと次のような項目を記載することをおすすめします。
 
-## Features
+## 機能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+あなたの拡張機能が何をするのかスクリーンショットを含めてその特徴的な機能について記述してください。
 
-For example if there is an image subfolder under your extension project workspace:
+例えば、拡張機能プロジェクトのワークスペースの配下に画像用のサブファイルがあるなら：
 
 \!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> Tip: 数多くの人気拡張機能はアニメーションを使って機能を説明しています。これは拡張機能を紹介する上でとても良い方法です！　短く厳選したアニメーションをおすすめします。
 
-## Requirements
+## 利用要項
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+拡張機能を使う前提として必要なものや依存するものがあれば、インストール方法や設定を記載します。
 
-## Extension Settings
+## 拡張機能の設定
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+`contributes.configuration`を使って、Visual Studio Codeに追加設定を加えるような場合は記載してください。
 
-For example:
+例：
 
-This extension contributes the following settings:
+この拡張機能は次の設定に寄与します。
 
 * `myExtension.enable`: enable/disable this extension
 * `myExtension.thing`: set to `blah` to do something
 
-## Known Issues
+## 既知の課題
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+既知の問題を公開しておくことで、ユーザーがあなたの拡張機能に対して重複した問い合わせをすることを防ぎます。
 
-## Release Notes
+## リリースノート
 
-Users appreciate release notes as you update your extension.
+拡張機能を更新する場合にリリースノートが役立ちます。
 
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+イベントスクリプト用のシンタックスハイライト機能を追加
