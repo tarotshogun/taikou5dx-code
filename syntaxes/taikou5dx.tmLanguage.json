@@ -177,7 +177,7 @@
 				},
 				{
 					"name" : "entity.name.function.taikou5dx",
-					"match": "\\s(\\S*?):"
+					"match": "\\s(\\w*?):"
 				}
 			]
 		},
