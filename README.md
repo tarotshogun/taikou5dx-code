@@ -9,6 +9,17 @@
 現状ではシンタックスハイライトのみを機能として有しています。
 自動補完や静的解析機能は今後の開発予定のアイテムです。
 
+### 開発予定の機能
+
+今後の拡張機能として下記を予定しています。
+
+- コード補完機能
+- プロパティの情報表示機能
+- スクリプトの静的解析機能
+- スクリプトのフォーマット機能
+
+バグフィックスや機能追加などプルリクエストは随時お待ちしております。
+
 ## 使い方
 
 1. イベントスクリプトファイルを開きます
@@ -17,15 +28,17 @@
 
 ### 推奨設定
 
-下記のワークスペースファイルに下記を追加することをお勧めします。
+ワークスペースの設定に下記を追加することをお勧めします。
 
 ```json
-"settings": {
-  "files.encoding": "shiftjis",
-  "files.eol": "\r\n",
-  "editor.insertSpaces": false,
-  "files.associations": {
-    "*.txt": "taikou5dx"
+{
+  "settings": {
+    "files.encoding": "shiftjis",
+    "files.eol": "\r\n",
+    "editor.insertSpaces": false,
+    "files.associations": {
+      "*.txt": "taikou5dx"
+    }
   }
 }
 ```
