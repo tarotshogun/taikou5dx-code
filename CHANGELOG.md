@@ -6,4 +6,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+- Added code completion
+- Added parameter info
+- Added quick info
+- Added linter
+- Added formatter
+
+## [0.1.0] - 2022-05-21
+
+### Added
+
+- Added syntax highlight for event scripts
