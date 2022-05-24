@@ -15,6 +15,21 @@
 
 1. VS Codeの「言語モードの選択」から `taikou5dx` を選択してください
 
+### 推奨設定
+
+下記のワークスペースファイルに下記を追加することをお勧めします。
+
+```json
+"settings": {
+  "files.encoding": "shiftjis",
+  "files.eol": "\r\n",
+  "editor.insertSpaces": false,
+  "files.associations": {
+    "*.txt": "taikou5dx"
+  }
+}
+```
+
 ## 既知の課題
 
 ## リリースノート
