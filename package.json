@@ -1,7 +1,7 @@
 {
     "name": "taikou5dx-code",
-    "displayName": "TAIKO-RISSIDEN event scripts",
-    "description": "TAIKO-RISSIDEN event scripts for Visual Studio Code.",
+    "displayName": "TAIKO-RISSIDEN 5DX event scripts",
+    "description": "TAIKO-RISSIDEN 5DX event scripts for Visual Studio Code.",
     "version": "0.1.0",
     "publisher": "tarotshogun",
     "author": {
