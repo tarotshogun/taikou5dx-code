@@ -12,6 +12,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Added linter
 - Added formatter
 
+## [0.2.0] - 2022-06-12
+
+### Added
+
+- Added auto completion for event scripts
+
 ## [0.1.0] - 2022-05-21
 
 ### Added
